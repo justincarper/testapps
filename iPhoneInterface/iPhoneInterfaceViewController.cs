@@ -27,6 +27,7 @@ namespace iPhoneInterface
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
+			MessageService.ShowMessage ("ViewDidLoad", "ViewDidLoad");
 		}
 
 		public override void ViewWillAppear (bool animated)

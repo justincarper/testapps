@@ -13,6 +13,7 @@ namespace iPhoneInterface
 			tab1.Title = "Green";
 			tab1.View.BackgroundColor = UIColor.Green;
 
+
 			tab2 = new UIViewController();
 			tab2.Title = "Orange";
 			tab2.View.BackgroundColor = UIColor.Orange;
@@ -26,6 +27,22 @@ namespace iPhoneInterface
 			};
 
 			ViewControllers = tabs;
+		}
+
+		public override void DidChange (Foundation.NSKeyValueChange changeKind, Foundation.NSIndexSet indexes, Foundation.NSString forKey)
+		{
+			base.DidChange (changeKind, indexes, forKey);
+
+			MessageService.ShowMessage ("changed", "changed");
+		}
+
+		protected void HandleLeftSwipe(UISwipeGestureRecognizer recognizer)
+		{
+			if (this.TabBarController.SelectedIndex != 4) {
+				this.TabBarController.SelectedIndex = this.TabBarController.SelectedIndex + 1;
+			}
+			MessageService.ShowMessage ("HandleLeftSwipe", "HandleLeftSwipe");
+
 		}
 	}
 }

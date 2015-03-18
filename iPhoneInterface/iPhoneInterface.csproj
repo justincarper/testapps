@@ -109,6 +109,7 @@
       <DependentUpon>iPhoneInterfaceViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="TabController.cs" />
+    <Compile Include="MessageService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

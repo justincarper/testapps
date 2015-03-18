@@ -14,7 +14,12 @@ namespace iPhoneInterface
 	public partial class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-		
+
+		public AppDelegate(){
+			MessageService.Initialize (this);
+			MessageService.ShowMessage ("init", "init message");
+		}
+
 		public override UIWindow Window {
 			get;
 			set;
